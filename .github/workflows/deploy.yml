@@ -39,7 +39,7 @@ jobs:
       - name: 设置node.js
         uses: actions/setup-node@v4
         with:
-          node-version: 22
+          node-version: 24
           cache: npm 
       - name: 安装依赖
         run: npm ci # 或 pnpm install / yarn install / bun install
@@ -52,4 +52,5 @@ jobs:
         with:
           # 部署文档
           branch: open_docs
-          folder: src/.vuepress/dist
+          folder: .vitepress/dist
+          clean: true
