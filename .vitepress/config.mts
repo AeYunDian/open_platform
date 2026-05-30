@@ -6,7 +6,7 @@ export default defineConfig({
   description: "简单、可靠、为个人开发者打造的API服务平台",
   base: '/',
   lastUpdated: true,
-  
+  lang: 'zh-CN',
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
     footer: {
