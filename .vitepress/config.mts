@@ -7,7 +7,14 @@ export default defineConfig({
   base: '/',
   lastUpdated: true,
   lang: 'zh-CN',
+  head: [
+    ['link', { rel: 'icon', href: '/favicon.ico' }],
+    ['link', { rel: 'icon', href: '/logo.svg' }],
+    ['link', { rel: 'icon', href: '/logo.png' }],
+    ['link', { rel: 'icon', href: '/logo.uhd.png' }],
+  ],
   themeConfig: {
+    logo: '/logo.uhd.png',
     // https://vitepress.dev/reference/default-theme-config
     footer: {
       message: '基于 MIT 许可发布',
@@ -38,21 +45,89 @@ export default defineConfig({
     darkModeSwitchTitle: '切换到深色模式',
     skipToContentLabel: '跳转到内容',
     nav: [
-      { text: '主页', link: '/' },
-      { text: '示例', link: '/markdown-examples' }
-    ],
-    sidebar: [
+      { text: '首页', link: '/' },
+      { text: '指南', link: '/guide/' },
+      { text: 'API 参考', link: '/api/' },
+      { text: '关于', link: '/about' },
       {
-        text: '示例',
+        text: '相关链接',
         items: [
-          { text: 'Markdown 示例', link: '/markdown-examples' },
-          { text: '运行时API示例', link: '/api-examples' }
+          { text: 'GitHub', link: 'https://github.com/AeYunDian/open_platform' },
+          { text: '主站', link: 'https://undz.cn' },
         ]
       }
     ],
+    sidebar: {
+      // 指南侧边栏（/guide/ 下的文件）
+      '/guide/': [
+        {
+          text: '开始',
+          items: [
+            { text: '快速开始', link: '/guide/' },
+            { text: '常见问题', link: '/guide/faq' }
+          ]
+        },
+        {
+          text: 'API文档',
+          link: "/api/" 
+        },
+        {
+          text: '关于',
+          link: "/about" 
+        }
+        // 如果你还有更多指南文档，可以继续添加分组
+      ],
+      '/about': [
+        {
+          text: '开始',
+          items: [
+            { text: '快速开始', link: '/guide/' },
+            { text: '常见问题', link: '/guide/faq' }
+          ]
+        },
+        {
+          text: 'API文档',
+          link: "/api/" 
+        },
+        {
+          text: '关于',
+          link: "/about" 
+        }
+        // 如果你还有更多指南文档，可以继续添加分组
+      ],
+      // API 侧边栏（/api/ 下的文件）
+      '/api/': [
+        {
+          text: '核心 API',
+          items: [
+            { text: '总览', link: '/api/' },                // 对应 api/index.md
+            { text: 'IP 归属地', link: '/api/ip' },
+            { text: '添加 QQ 好友', link: '/api/add-qq-friend' },
+            { text: '短链解析', link: '/api/short-link/short-link-resolve' },
+            { text: '创建短链', link: '/api/short-link/short-link-create' }
+          ]
+        },
+        {
+          text: '文本分享 (AyPass)',
+          items: [
+            { text: '保存文本', link: '/api/pass-text/pass-text-save' },
+            { text: '删除文本', link: '/api/pass-text/pass-text-delete' }
+          ]
+        },
+        {
+          text: '其他服务',
+          items: [
+            { text: '邮件验证码', link: '/api/verifymail' },
+            { text: '聊天室', link: '/api/chatroom' },
+            { text: 'Crossfire: Ys', link: '/api/crossfire' },
+            { text: '网络代理', link: '/api/proxy' }
+          ]
+        }
+      ]
+    },
 
     socialLinks: [
-      { icon: 'github', link: 'https://github.com/AeYunDian/AyCanvars' }
+      { icon: 'github', link: 'https://github.com/AeYunDian/open_platform' }
     ]
   }
 })
