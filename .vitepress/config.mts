@@ -2,6 +2,9 @@ import { defineConfig } from 'vitepress'
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
+  sitemap: {
+    hostname: 'https://open.undz.cn'
+  },
   title: "AyOpenPlatform",
   description: "简单、可靠、为个人开发者打造的API服务平台",
   base: '/',
