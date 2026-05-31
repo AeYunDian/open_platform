@@ -20,8 +20,8 @@ export default defineConfig({
     logo: '/logo.uhd.png',
     // https://vitepress.dev/reference/default-theme-config
     footer: {
-      message: '基于 MIT 许可发布',
-      copyright: '版权所有 © 2026-至今 韵典'
+      message: '<a href="https://icp.gov.moe/?keyword=20263045" target="_blank">萌ICP备20263045号</a>',
+      copyright: 'Copyright © 2026 AeYunDian'
     },
     docFooter: {
       prev: '上一页',
@@ -43,7 +43,7 @@ export default defineConfig({
     langMenuLabel: '多语言',
     returnToTopLabel: '回到顶部',
     sidebarMenuLabel: '菜单',
-    darkModeSwitchLabel: '主题',
+    darkModeSwitchLabel: '黑暗模式',
     lightModeSwitchTitle: '切换到浅色模式',
     darkModeSwitchTitle: '切换到深色模式',
     skipToContentLabel: '跳转到内容',
