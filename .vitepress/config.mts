@@ -11,10 +11,10 @@ export default defineConfig({
   lastUpdated: true,
   lang: 'zh-CN',
   head: [
-    ['link', { rel: 'icon', href: '/favicon.ico' }],
-    ['link', { rel: 'icon', href: '/logo.svg' }],
-    ['link', { rel: 'icon', href: '/logo.png' }],
-    ['link', { rel: 'icon', href: '/logo.uhd.png' }],
+    ['link', { rel: 'icon', href: '/favicon.ico', type: 'image/x-icon' }],
+    ['link', { rel: 'icon', href: '/logo.png', type: 'image/png' }],
+    ['link', { rel: 'icon', href: '/logo.svg', type: 'image/svg+xml' }],
+    ['link', { rel: 'icon', href: '/cdn-cgi/image/width=96,height=96/logo.uhd.png', type: 'image/png' }],
   ],
   themeConfig: {
     logo: '/logo.uhd.png',
