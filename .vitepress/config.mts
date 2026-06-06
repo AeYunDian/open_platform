@@ -107,7 +107,8 @@ export default defineConfig({
             { text: 'IP 归属地', link: '/api/ip' },
             { text: '添加 QQ 好友', link: '/api/add-qq-friend' },
             { text: '短链解析', link: '/api/short-link/short-link-resolve' },
-            { text: '创建短链', link: '/api/short-link/short-link-create' }
+            { text: '创建短链', link: '/api/short-link/short-link-create' },
+            { text: '二维码生成', link: '/api/qrcode-generator' }
           ]
         },
         {
@@ -124,6 +125,7 @@ export default defineConfig({
             { text: '聊天室', link: '/api/chatroom' },
             { text: 'Crossfire: Ys', link: '/api/crossfire' },
             { text: '网络代理', link: '/api/proxy' }
+
           ]
         }
       ]
