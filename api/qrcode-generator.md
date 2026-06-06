@@ -1,10 +1,11 @@
 # 二维码生成
 
-生成 QR Code 二维码，支持 PNG、SVG、PDF 三种输出格式，可自定义纠错等级、边距、尺寸等参数。
+生成 QR Code 二维码，支持 PNG、SVG、PDF 三种输出格式，可自定义纠错等级、边距、尺寸等参数，**直接返回 PNG / SVG / PDF 二进制数据**
 
 ## 接口信息
 
 - **请求方法**：`GET`
+- **请求主机名**：`api.undz.cn` 或 `api.io.hb.cn`
 - **请求路径**：`/qrcode`
 
 ## 请求参数
@@ -32,7 +33,7 @@
 
 - 该接口无需认证，可直接调用。
 - 响应头中设置了 `Cache-Control: public, max-age=3600`，同一参数生成的二维码会缓存 1 小时。
-- 直接访问 `/qrcode` 不带任何参数时，会返回一个美观的 HTML 生成表单，用户可填写内容并即时生成二维码。
+- 直接访问 `/qrcode` 不带任何参数时，会返回一个 HTML 生成表单，用户可填写内容并即时生成二维码。
 
 ## 调用示例
 
@@ -65,7 +66,10 @@ curl "https://api.undz.cn/qrcode?text=https://example.com/very/long/path&size=50
 ```html
 <img src="https://api.undz.cn/qrcode?text=你好&size=300" alt="QR Code">
 ```
-
+::: info 二维码示例
+![二维码示例](https://api.undz.cn/qrcode?text=https://open.undz.cn&size=71)
+https://api.undz.cn/qrcode?text=https://open.undz.cn&size=71
+:::
 ## 前端表单页面预览
 
 访问 `/qrcode` 即可看到如下交互界面（自动适配移动端）：
